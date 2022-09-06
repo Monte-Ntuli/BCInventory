@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
     NgbModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatSnackBarModule,
+    HttpClientModule,
 
   ],
   providers: [],
