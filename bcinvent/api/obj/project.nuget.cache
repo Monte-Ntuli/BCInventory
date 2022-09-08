@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "oIy1K6T43qGnoc0j2BXQ1RfLYtM6xYlKeQhQjV5B78Q4YqwSgWvIZjO6nRPibOdG5ZZFyT+AxBUYsJs+Sq8deQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CloudUser\\Documents\\GitHub\\BCInventory\\bcinvent\\api\\BCInventApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CloudUser\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\CloudUser\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\CloudUser\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\CloudUser\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\CloudUser\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\CloudUser\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

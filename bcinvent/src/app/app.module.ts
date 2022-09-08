@@ -10,12 +10,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
+import { ClassesComponent } from './classes/classes.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    SidenavComponent,
+    HomeComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +35,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatSnackBarModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatProgressBarModule,
 
   ],
   providers: [],

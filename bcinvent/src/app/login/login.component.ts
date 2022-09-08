@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   btnClick(){
     let name = this.loginform.get('email')?.value;
     sessionStorage.setItem('name',name);
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('/home');
   };
 
 }
