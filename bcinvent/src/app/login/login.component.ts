@@ -25,8 +25,10 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.loginService.login(this.loginform.value).subscribe(data =>{
+      console.log(data);
       this.btnClick();
     }, err => {
+      console.log(err);
       this._snackbar.open('Incorrect credentials');
     })
   }
