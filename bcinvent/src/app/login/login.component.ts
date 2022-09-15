@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { LoginService } from '../services/login.service';
+import { LoginService } from '../services/LoginService/login.service';
 
 @Component({
   selector: 'app-login',
@@ -25,8 +25,8 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.loginService.login(this.loginform.value).subscribe(data =>{
-      console.log(data);
-      this.btnClick();
+      console.log(data)
+      this.btnClick()
     }, err => {
       console.log(err);
       this._snackbar.open('Incorrect credentials');
