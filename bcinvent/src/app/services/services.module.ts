@@ -8,6 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     HttpClientModule
+  ],
+  exports: [
+    
   ]
 })
 export class ServicesModule { }

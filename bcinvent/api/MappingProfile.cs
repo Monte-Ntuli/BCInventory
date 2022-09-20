@@ -1,4 +1,4 @@
-﻿using api.Entities;
+using api.Entities;
 using api.Models;
 using api.Models.DTO;
 using AutoMapper;
@@ -11,6 +11,8 @@ namespace api
         {
             CreateMap<ClassRoomEntity, ClassRoomModel>().ReverseMap();
             CreateMap<ClassRoomEntity, CreateClassRoomDTO>().ReverseMap();
+            CreateMap<ClassRoomEntity, UpdateClassRoomDTO>().ReverseMap();
+            CreateMap<ClassRoomEntity, ClassRoomIdDTO>().ReverseMap();
         }
     }
 }

@@ -18,6 +18,9 @@ import { HomeComponent } from './home/home.component';
 import { ClassesComponent } from './classes/classes.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddClassComponent } from './add-class/add-class.component';
+import { ViewClassComponent } from './view-class/view-class.component';
+import { UpdateClassComponent } from './update-class/update-class.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     SidenavComponent,
     HomeComponent,
-    ClassesComponent
+    ClassesComponent,
+    AddClassComponent,
+    ViewClassComponent,
+    UpdateClassComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,5 @@
 <mat-card class="container-lg">
     <mat-drawer-container class="example-container">
-
-        <mat-drawer  mode="side" opened>
-            <app-sidenav></app-sidenav>
-        </mat-drawer>
         <br>
         <mat-drawer-content>
             <div class="main-content bg-white">
@@ -12,32 +8,35 @@
 
                 <div class="container-fluid">
 
+                    <div>
+                        <button type="button" class="btn btn-primary" (click)="addClass()">Add ClassRoom </button>
+                        
+                    </div>
+                    <br>
                     <div class="row">
-
                         <ul class="row">
                             <li class="row">
-                                <br>
-                                    <mat-card class="col-lg-3 col-md-6 col-sm-6" >
-                                        <div>
+                                    
+                                        <mat-card style="margin: 0.5%;" class="col-xl-3 col-md-6 col-sm-6" role="listitem" *ngFor="let class of classRooms">
                                             <div class="card border-primary bg-white mb-3">
                                                 <div class="card-header bg-white card-header-icon">
-                                                    <div class="card-icon"><i class="material-icons">school</i></div>
+                                                    <div class="card-icon "><i class="material-icons ">school</i></div>
 
-                                                    <p class="card-category">Beta</p>
-                                                    <h3 class="card-title"><small>Questionaires</small></h3>
-
+                                                    <h1 class="card-category">{{class.className}}</h1>
+                                                    <h2 class="card-title"><small>{{class.classIP}}</small></h2>
+                                                            <a type="button" class="btn btn-warning">Update</a>
                                                 </div>
                                                 <div class="card-footer border-primary bg-white mb-3 text-black">
-                                                    <div> <a href="questions"> <i class="material-icons">school</i> View Questionaire </a></div>
+                                                    <div> <a href="viewclass"> <i class="material-icons col-md-6">school</i><button type="button" class="btn btn-primary">View ClassRoom</button></a> &nbsp;  <a type="button" class="btn btn-danger">Delete</a> </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </mat-card>
-                                <br>
+                                        </mat-card>
+                                    
+                                    &nbsp;
+                                    &nbsp;
                             </li>
                         </ul>
-                    </div>
-                    <br> 
+                    </div> 
                 </div>
             </div>
 

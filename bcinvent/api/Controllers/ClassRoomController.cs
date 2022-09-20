@@ -1,4 +1,4 @@
-﻿using api.Entities;
+using api.Entities;
 using api.Models;
 using api.Models.DTO;
 using api.Services.Interfaces;
@@ -33,25 +33,94 @@ namespace api.Controllers
         }
 
         #region Create Class Room
-        [HttpPost()]
-        public async Task<IActionResult> AddClassRoom([FromBody] CreateClassRoomDTO classRoom)
+        [HttpPost("CreateClassRoom")]
+        public async Task<IActionResult> AddClassRoom([FromBody] CreateClassRoomDTO createClassRoom)
         {
             try
             {
-                await _unitOfWork.ClassRoom.AddAsync(_mapper.Map<ClassRoomEntity>(classRoom));
+                await _unitOfWork.ClassRoom.AddAsync(_mapper.Map<ClassRoomEntity>(createClassRoom));
                 return Accepted("Class Room Created");
             }
             catch (Exception ex)
             {
-                var error = new ErrorModel
-                {
-                    title = ex.Message
-                };
+                var error = new ErrorModel { title = ex.Message };
 
                 return BadRequest(error);
             }
         }
-        #endregion
+    #endregion
+
+    #region Update Class Room
+    [HttpPost("UpdateClassRoom")]
+    public async Task<IActionResult> UpdateClassRoom([FromBody] UpdateClassRoomDTO updateClassRoom)
+    {
+      try
+      {
+        await _unitOfWork.ClassRoom.UpdateAsync(_mapper.Map<ClassRoomEntity>(updateClassRoom));
+        return Accepted("success");
+      }
+      catch (Exception ex)
+      {
+        var error = new ErrorModel { title = ex.Message };
+
+        return BadRequest(error);
+      }
     }
+    #endregion
+
+    #region Delete Class Room
+    [HttpDelete("DeleteClassRoom")]
+    public async Task<IActionResult> DeleteClassRoom([FromBody] ClassRoomIdDTO deleteClassRoom)
+    {
+      try
+      {
+        await _unitOfWork.ClassRoom.DeleteAsync(_mapper.Map<ClassRoomEntity>(deleteClassRoom));
+        return Accepted("success");
+      }
+      catch (Exception ex)
+      {
+        var error = new ErrorModel { title = ex.Message };
+
+        return BadRequest(error);
+      }
+    }
+    #endregion
+
+    #region Get All ClassRooms
+    [HttpGet("GetAllClassRooms")]
+    public async Task<IActionResult> GetAllClassRooms()
+    {
+      try
+      {
+        var classRooms = await _unitOfWork.ClassRoom.GetAllAsync();
+        return Accepted(classRooms);
+      }
+      catch (Exception ex)
+      {
+        var error = new ErrorModel { title = ex.Message };
+
+        return BadRequest(error);
+      }
+    }
+    #endregion
+
+    #region Get Specific ClassRoom
+    [HttpGet("GetSpecificClassRoom/{classRoomId}")]
+    public async Task<IActionResult> GetSpecificClassRoom(int classRoomId)
+    {
+      try
+      {
+        var classRoom = await _unitOfWork.ClassRoom.GetSpecificClassRoomAsync(classRoomId);
+        return Accepted(classRoom);
+      }
+      catch (Exception ex)
+      {
+        var error = new ErrorModel { title = ex.Message };
+
+        return BadRequest(error);
+      }
+    }
+    #endregion
+  }
 }
 

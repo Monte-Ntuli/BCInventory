@@ -16,4 +16,24 @@ export class LoginService {
     return this.http.post(this.baseUrl + "Login/Login",UserDetails);
   }
 
+  CreateClassRoom(createClassRoom : any){
+    return this.http.post(this.baseUrl + "ClassRoom/CreateClassRoom",createClassRoom);
+  }
+
+  UpdateClassRoom(updateClassRoom : any){
+    return this.http.post(this.baseUrl + "ClassRoom/UpdateClassRoom",updateClassRoom);
+  }
+
+  DeleteClassRoom(deleteClassRoom : any){
+    return this.http.delete(this.baseUrl + "ClassRoom/DeleteClassRoom",deleteClassRoom);
+  }
+
+  GetAllClassRoom(){
+    return this.http.get(this.baseUrl + "ClassRoom/GetAllClassRooms");
+  }
+
+  GetSpecificClassRoom(ClassRoomId : any){
+    return this.http.get(this.baseUrl + "ClassRoom/DeleteClassRoom",ClassRoomId);
+  }
+
 }

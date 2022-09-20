@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LoginService } from '../services/LoginService/login.service';
 
 @Component({
   selector: 'app-classes',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassesComponent implements OnInit {
 
-  constructor() { }
+  classRooms : any;
+
+  constructor(private loginService : LoginService,
+    private _snackBar: MatSnackBar,
+    private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.displayAllClassRooms();
   }
 
+  addClass()
+  {
+    this.router.navigateByUrl('/addclass');
+  }
+
+  displayAllClassRooms()
+  {
+    this.loginService.GetAllClassRoom().subscribe(data => {
+      this.classRooms = data;
+    }, err => {
+      this._snackBar.open("Can Not Display ClassRooms");
+    })
+  }
 }
