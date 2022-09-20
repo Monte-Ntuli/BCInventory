@@ -1,20 +1,13 @@
-using api.Models;
+﻿using api.Models;
 using api.Services;
 using api.Services.Interfaces;
-using AutoMapper;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace api
@@ -27,41 +20,40 @@ namespace api
         }
 
         public IConfiguration Configuration { get; }
-
-    // This method gets called by the runtime. Use this method to add services to the container.
-    readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-    public void ConfigureServices(IServiceCollection services)
+        // This method gets called by the runtime. Use this method to add services to the container.
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
+            services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
-      services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
-
-      services.AddCors(options =>
-          {
-            options.AddPolicy(name: MyAllowSpecificOrigins,
-                          builder =>
-                          {
-                            builder.WithOrigins("http://localhost:4200")
-                                    .AllowAnyHeader()
-                                    .AllowAnyMethod();
-                          });
-           });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                              builder =>
+                              {
+                                  builder.WithOrigins("http://localhost:4200")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod();
+                              });
+            });
 
             var stribg = Configuration.GetConnectionString("DevConnection");
-              services.AddDbContext<InventoryDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DevConnection"))
-                );
+            services.AddDbContext<InventoryDbContext>(options =>
+              options.UseSqlServer(Configuration.GetConnectionString("DevConnection"))
+              );
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "api", Version = "v1" });
             });
 
-      services.AddAutoMapper(typeof(MappingProfile));
-      services.AddScoped<IUnitOfwork, UnitOfWork>();
+            services.AddAutoMapper(typeof(MappingProfile));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddAuthorization();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(WebApplication app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -74,14 +66,23 @@ namespace api
 
             app.UseRouting();
 
-      app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(MyAllowSpecificOrigins);
 
-      app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.Run();
+
         }
     }
 }

@@ -1,21 +1,16 @@
-using api.Entities;
+﻿using api.Entities;
 using api.Models;
-using api.Models.Requests;
+using api.Models.DTO;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
 
 namespace api
 {
-  public class MappingProfile : Profile
-  {
-    public MappingProfile()
+    public class MappingProfile : Profile
     {
-      CreateMap<ClassRoomEntity, ClassRoomModel>().ReverseMap();
-      CreateMap<ClassRoomEntity, CreateClassRoomRequestModel>().ReverseMap();
+        public MappingProfile()
+        {
+            CreateMap<ClassRoomEntity, ClassRoomModel>().ReverseMap();
+            CreateMap<ClassRoomEntity, CreateClassRoomDTO>().ReverseMap();
+        }
     }
-  }
 }

@@ -1,14 +1,9 @@
-using api.Repos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Threading.Tasks;
+﻿using api.Repos.Interfaces;
 
 namespace api.Services.Interfaces
 {
-  public interface IUnitOfwork
-  {
-    IClassRoomRepository ClassRoom { get; }
-  }
+    public interface IUnitOfWork
+    {
+        IClassRoomRepository ClassRoom { get; }
+    }
 }
