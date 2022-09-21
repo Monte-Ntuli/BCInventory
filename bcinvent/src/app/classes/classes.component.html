@@ -1,12 +1,13 @@
-<mat-card class="container-lg">
-    <mat-drawer-container class="example-container">
+<br>
+<br>
+<div class="shadow container-lg">
+    <mat-drawer-container class="example-container bg-white">
         <br>
-        <mat-drawer-content>
-            <div class="main-content bg-white">
+            <div class="container-fluid main-content bg-white">
                 <br>
                 <h1>Belgium Campus Classrooms </h1>
 
-                <div class="container-fluid">
+                <div class="">
 
                     <div>
                         <button type="button" class="btn btn-primary" (click)="addClass()">Add ClassRoom </button>
@@ -16,30 +17,24 @@
                     <div class="row">
                         <ul class="row">
                             <li class="row">
-                                    
-                                        <mat-card style="margin: 0.5%;" class="col-xl-3 col-md-6 col-sm-6" role="listitem" *ngFor="let class of classRooms">
-                                            <div class="card border-primary bg-white mb-3">
+                                        <div class="col-xl-3 col-sm-6 col-sm-6" role="listitem" *ngFor="let class of classRooms">
+                                            <div class="shadow card bg-body rounded mb-3">
                                                 <div class="card-header bg-white card-header-icon">
                                                     <div class="card-icon "><i class="material-icons ">school</i></div>
 
                                                     <h1 class="card-category">{{class.className}}</h1>
                                                     <h2 class="card-title"><small>{{class.classIP}}</small></h2>
-                                                            <a type="button" class="btn btn-warning">Update</a>
+                                                    <a [routerLink]="['updateclass', class.classID]" class="btn btn-warning">Update</a>
                                                 </div>
-                                                <div class="card-footer border-primary bg-white mb-3 text-black">
-                                                    <div> <a href="viewclass"> <i class="material-icons col-md-6">school</i><button type="button" class="btn btn-primary">View ClassRoom</button></a> &nbsp;  <a type="button" class="btn btn-danger">Delete</a> </div>
+                                                <div class="card-footer bg-white mb-3 text-black">
+                                                    <div> <a [routerLink]="['viewclass',class.classID]" > <i class="material-icons col-md-6">school</i><a type="button" class="btn btn-primary">View ClassRoom</a></a> &nbsp;  <a type="button" class="btn btn-danger">Delete</a> </div>
                                                 </div>
                                             </div>
-                                        </mat-card>
-                                    
-                                    &nbsp;
-                                    &nbsp;
+                                        </div>
                             </li>
                         </ul>
                     </div> 
                 </div>
             </div>
-
-        </mat-drawer-content>
     </mat-drawer-container>
-</mat-card>
+</div>

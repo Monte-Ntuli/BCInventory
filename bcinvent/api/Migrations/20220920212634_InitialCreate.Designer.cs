@@ -12,8 +12,8 @@ using api;
 namespace api.Migrations
 {
     [DbContext(typeof(InventoryDbContext))]
-    [Migration("20220920134118_initialCreate")]
-    partial class initialCreate
+    [Migration("20220920212634_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

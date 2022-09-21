@@ -14,10 +14,15 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'classes', component: ClassesComponent},
+
+  { path: 'classes', 
+    children : [
+      { path: '', component: ClassesComponent},
+      { path: 'viewclass/:id', component: ViewClassComponent},
+      { path: 'updateclass/:id', component: UpdateClassComponent},
+      
+    ]},
   { path: 'addclass', component: AddClassComponent},
-  { path: 'viewclass', component: ViewClassComponent},
-  { path: 'updateclass', component: UpdateClassComponent}
 
 ];
 

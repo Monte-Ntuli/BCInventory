@@ -32,8 +32,8 @@ export class LoginService {
     return this.http.get(this.baseUrl + "ClassRoom/GetAllClassRooms");
   }
 
-  GetSpecificClassRoom(ClassRoomId : any){
-    return this.http.get(this.baseUrl + "ClassRoom/DeleteClassRoom",ClassRoomId);
+  GetSpecificClassRoom(classRoomId : any){
+    return this.http.get(this.baseUrl + "ClassRoom/GetSpecificClassRoom/" + classRoomId);
   }
 
 }

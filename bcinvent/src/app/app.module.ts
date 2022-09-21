@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddClassComponent } from './add-class/add-class.component';
 import { ViewClassComponent } from './view-class/view-class.component';
 import { UpdateClassComponent } from './update-class/update-class.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { UpdateClassComponent } from './update-class/update-class.component';
     MatIconModule,
     MatProgressBarModule,
     ReactiveFormsModule,
+    MatButtonModule
 
   ],
   providers: [

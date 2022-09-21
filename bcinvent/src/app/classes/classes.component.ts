@@ -30,6 +30,7 @@ export class ClassesComponent implements OnInit {
   {
     this.loginService.GetAllClassRoom().subscribe(data => {
       this.classRooms = data;
+      console.log(data)
     }, err => {
       this._snackBar.open("Can Not Display ClassRooms");
     })
