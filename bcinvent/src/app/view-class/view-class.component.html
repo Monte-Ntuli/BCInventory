@@ -6,15 +6,16 @@
             <h1>Welcome To {{classRoom.className}}</h1>
             <h2>IP address is {{classRoom.classIP}}</h2>
             <br>
+            <a href="classes" class="btn btn-warning">Exit</a>
             <br>
                 <div class="row">
                     <ul class="row">
                         <li class="row">
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>desktop_windows</mat-icon></div>
-                                    <mat-card-title>Computers</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-title> Computers</mat-card-title>
+                                    <mat-card-subtitle> {{classRoom.classComputer}} ThinClients </mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -24,11 +25,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>tv</mat-icon></div>
-                                    <mat-card-title>Screens</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-title> Screens</mat-card-title>
+                                    <mat-card-subtitle>{{classRoom.classScreens}} Screens</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -38,11 +39,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>mouse</mat-icon></div>
                                     <mat-card-title>Mouses</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.classMouses}} Mouses</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -52,11 +53,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>keyboard</mat-icon></div>
                                     <mat-card-title>Keyboards</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.classKeyboards}} Keyboards</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -66,11 +67,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>laptop_mac</mat-icon></div>
                                     <mat-card-title>Lecturer PC </mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.lecturerPC}} Lecturer Pcs</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -80,11 +81,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>desktop_mac</mat-icon></div>
                                     <mat-card-title>Lecturer Screens</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.LecturerScreens}} Lecturer Screens</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -94,11 +95,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>tv</mat-icon></div>
                                     <mat-card-title>TVs</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.classTVs}} TVs</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -108,11 +109,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>settings_remote</mat-icon></div>
                                     <mat-card-title>TV Remote</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.classTVRemotes}} TV Remotes</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -122,11 +123,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>scanner</mat-icon></div>
                                     <mat-card-title>Servers</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.classServers}} Servers</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -136,11 +137,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>microphone</mat-icon></div>
-                                    <mat-card-title>Microphones</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-title> Micro Phones </mat-card-title>
+                                    <mat-card-subtitle>{{classRoom.micrphones}} Microphones</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -150,11 +151,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>cast_for_education</mat-icon></div>
                                     <mat-card-title>Projector</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.projectors}} Projectors</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -164,11 +165,11 @@
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
                             </mat-card>
-                            <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <!-- <mat-card class="col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                                 <mat-card-header>
                                     <div mat-card-avatar class="example-header-image"><mat-icon>settings_remote</mat-icon></div>
                                     <mat-card-title>Projector Remote</mat-card-title>
-                                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                                    <mat-card-subtitle>{{classRoom.classComputer}} Projector Remotes</mat-card-subtitle>
                                   </mat-card-header>
                                   <mat-card-content>
     
@@ -177,7 +178,7 @@
                                     <button mat-button>LIKE</button>
                                     <button mat-button>SHARE</button>
                                   </mat-card-actions>
-                            </mat-card>
+                            </mat-card> -->
 
                         </li>
                     </ul>
