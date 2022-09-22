@@ -1,1 +1,145 @@
-<p>update-class works!</p>
+<mat-card class="container">
+    <mat-drawer-container>
+        <br>
+        <mat-drawer-content class="container bg-white">
+            <br>
+            <h1>Welcome To {{classRoom.className}}</h1>
+            <h2>IP address is {{classRoom.classIP}}</h2>
+            <br>
+            <a href="classes" class="btn btn-warning">Exit</a>
+            <br>
+            <div class="row">
+                <ul class="row">
+                    <li class="row">
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>desktop_windows</mat-icon></div>
+                                <mat-card-title> Computers</mat-card-title>
+                                <mat-card-subtitle> {{classRoom.classComputer}} ThinClients </mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/thinClient.jpg">
+                              </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                  
+                                </form>
+                              </mat-card-actions>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>tv</mat-icon></div>
+                                <mat-card-title> Screens</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classScreens}} Screens</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/studentMonitor.jpg">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>mouse</mat-icon></div>
+                                <mat-card-title>Mouses</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classMouses}} Mouses</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/studentMouse.jpg">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>keyboard</mat-icon></div>
+                                <mat-card-title>Keyboards</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classKeyboards}} Keyboards</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/studentKeyboard.png">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>laptop_mac</mat-icon></div>
+                                <mat-card-title>Lecturer PC </mat-card-title>
+                                <mat-card-subtitle>{{classRoom.lecturerPC}} Lecturer Pcs</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/lecturerPC.png">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>desktop_mac</mat-icon></div>
+                                <mat-card-title>Lecturer Screens</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.lecturerScreens}} Lecturer Screens</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/lecturerScreen.jpg">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>tv</mat-icon></div>
+                                <mat-card-title>TVs</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classTVs}} TVs</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/classRoomTV.png">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>settings_remote</mat-icon></div>
+                                <mat-card-title>TV Remote</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classTVRemotes}} TV Remotes</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/classRoomTVRemote.png">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>scanner</mat-icon></div>
+                                <mat-card-title>Servers</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classServers}} Servers</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/classServer.jpg">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>microphone</mat-icon></div>
+                                <mat-card-title> Micro Phones </mat-card-title>
+                                <mat-card-subtitle>{{classRoom.micrphones}} Microphones</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/classMicrophone.jpg">
+                              </mat-card-content>
+                        </mat-card>
+                        <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"><mat-icon>cast_for_education</mat-icon></div>
+                                <mat-card-title>Projector</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.projectors}} Projectors</mat-card-subtitle>
+                              </mat-card-header>
+                              <mat-card-content>
+                                <img mat-card-image src="../../assets/Images/classProjector.jpg">
+                              </mat-card-content>
+                        </mat-card>
+                    </li>
+                </ul>
+
+            </div>
+
+
+        </mat-drawer-content>
+    </mat-drawer-container>
+
+</mat-card>
