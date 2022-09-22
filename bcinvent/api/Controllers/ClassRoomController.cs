@@ -51,12 +51,30 @@ namespace api.Controllers
     #endregion
 
     #region Update Class Name
-    [HttpPost("UpdateClassRoom")]
+    [HttpPost("UpdateClassRoomName")]
     public async Task<IActionResult> UpdateClassNameAsync([FromBody] UpdateClassNameDTO updateClassRoom)
     {
       try
       {
         await _unitOfWork.ClassRoom.UpdateClassNameAsync(_mapper.Map<ClassRoomEntity>(updateClassRoom));
+        return Accepted("success");
+      }
+      catch (Exception ex)
+      {
+        var error = new ErrorModel { title = ex.Message };
+
+        return BadRequest(error);
+      }
+    }
+    #endregion
+
+    #region Update Class Name
+    [HttpPost("UpdateClassRoom")]
+    public async Task<IActionResult> UpdateClassRoomAsync([FromBody] UpdateClassRoomDTO updateClassRoom)
+    {
+      try
+      {
+        await _unitOfWork.ClassRoom.UpdateClassRoomAsync(_mapper.Map<ClassRoomEntity>(updateClassRoom));
         return Accepted("success");
       }
       catch (Exception ex)

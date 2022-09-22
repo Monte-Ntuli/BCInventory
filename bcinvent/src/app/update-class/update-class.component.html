@@ -10,15 +10,15 @@
             <br>
             <br>
             
-                <form class="row g-3">
+                <form class="row g-3" [formGroup]="classRoomInfoForm">
                     <div class="col-auto">
-                      <h2>Update IP address</h2>
+                      <h2>Update Class Name</h2>
                     </div>
                     <div class="col-auto">
-                      <input type="password" class="form-control" id="inputPassword2" placeholder="192.168.111.201">
+                      <input type="text" class="form-control" id="inputclassName" placeholder="Hello World" formControlName="className">
                     </div>
                     <div class="col-auto">
-                      <button type="submit" class="btn btn-primary mb-3">Update</button>
+                      <button type="submit" class="btn btn-primary mb-3" (click)="UpdateClassName()">Update</button>
                     </div>
                   </form>
         
@@ -35,13 +35,12 @@
                                 <img mat-card-image src="../../assets/Images/thinClient.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
-                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputclassComputer" placeholder="0" formControlName="classComputer">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button type="submit" mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -59,7 +58,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -80,7 +79,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -101,7 +100,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -122,7 +121,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -143,7 +142,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -164,7 +163,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -185,7 +184,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -206,7 +205,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -227,7 +226,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
@@ -248,7 +247,7 @@
                                 <form class="row g-3">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
                                   </div>
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>

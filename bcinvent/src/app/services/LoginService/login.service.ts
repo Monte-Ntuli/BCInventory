@@ -24,6 +24,10 @@ export class LoginService {
     return this.http.post(this.baseUrl + "ClassRoom/UpdateClassRoom",updateClassRoom);
   }
 
+  UpdateClassName(updateClassRoom : any){
+    return this.http.post(this.baseUrl + "ClassRoom/UpdateClassRoomName",updateClassRoom);
+  }
+
   DeleteClassRoom(deleteClassRoom : any){
     return this.http.delete(this.baseUrl + "ClassRoom/DeleteClassRoom",deleteClassRoom);
   }

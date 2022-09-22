@@ -41,6 +41,23 @@ namespace api.Repos
       return entity;
     }
 
+    public async Task<ClassRoomEntity> UpdateClassRoomAsync(ClassRoomEntity entity)
+    {
+      var classRoom = await _dbContext.ClassRoom.FirstOrDefaultAsync(x => x.ClassID == entity.ClassID);
+
+      if (classRoom == null)
+      {
+        return null;
+      }
+
+      classRoom.ClassName = entity.ClassName;
+      classRoom.ClassComputer = entity.ClassComputer;
+      _dbContext.Update(classRoom);
+      //_dbContext.Remove(classRoom);
+      await _dbContext.SaveChangesAsync();
+      return entity;
+    }
+
     public async Task<ClassRoomEntity> DeleteAsync(ClassRoomEntity entity)
     {
       var classRoom = await _dbContext.ClassRoom.FirstOrDefaultAsync(x => x.ClassID == entity.ClassID);
