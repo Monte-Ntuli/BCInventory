@@ -13,6 +13,8 @@ namespace api
             CreateMap<ClassRoomEntity, CreateClassRoomDTO>().ReverseMap();
             CreateMap<ClassRoomEntity, UpdateClassRoomDTO>().ReverseMap();
             CreateMap<ClassRoomEntity, ClassRoomIdDTO>().ReverseMap();
+
+            CreateMap<ClassRoomEntity, UpdateClassNameDTO>().ReverseMap();
         }
     }
 }

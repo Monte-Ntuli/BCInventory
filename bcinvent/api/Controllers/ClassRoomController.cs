@@ -50,13 +50,13 @@ namespace api.Controllers
         }
     #endregion
 
-    #region Update Class Room
+    #region Update Class Name
     [HttpPost("UpdateClassRoom")]
-    public async Task<IActionResult> UpdateClassRoom([FromBody] UpdateClassRoomDTO updateClassRoom)
+    public async Task<IActionResult> UpdateClassNameAsync([FromBody] UpdateClassNameDTO updateClassRoom)
     {
       try
       {
-        await _unitOfWork.ClassRoom.UpdateAsync(_mapper.Map<ClassRoomEntity>(updateClassRoom));
+        await _unitOfWork.ClassRoom.UpdateClassNameAsync(_mapper.Map<ClassRoomEntity>(updateClassRoom));
         return Accepted("success");
       }
       catch (Exception ex)

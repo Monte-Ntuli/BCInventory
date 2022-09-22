@@ -25,7 +25,7 @@ namespace api.Repos
             await _dbContext.SaveChangesAsync();
         }
 
-    public async Task<ClassRoomEntity> UpdateAsync(ClassRoomEntity entity)
+    public async Task<ClassRoomEntity> UpdateClassNameAsync(ClassRoomEntity entity)
     {
       var classRoom = await _dbContext.ClassRoom.FirstOrDefaultAsync(x => x.ClassID == entity.ClassID);
 
@@ -34,7 +34,7 @@ namespace api.Repos
         return null;
       }
 
-       
+       classRoom.ClassName = entity.ClassName;
       _dbContext.Update(classRoom);
       //_dbContext.Remove(classRoom);
       await _dbContext.SaveChangesAsync();
@@ -50,7 +50,8 @@ namespace api.Repos
         return null;
       }
 
-      _dbContext.ClassRoom.Remove(classRoom);
+      classRoom.ClassName = entity.ClassName;
+      _dbContext.ClassRoom.Update(classRoom);
       await _dbContext.SaveChangesAsync();
       return classRoom;
 
