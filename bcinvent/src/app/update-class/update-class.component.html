@@ -8,6 +8,20 @@
             <br>
             <a href="classes" class="btn btn-warning">Exit</a>
             <br>
+            <br>
+            
+                <form class="row g-3">
+                    <div class="col-auto">
+                      <h2>Update IP address</h2>
+                    </div>
+                    <div class="col-auto">
+                      <input type="password" class="form-control" id="inputPassword2" placeholder="192.168.111.201">
+                    </div>
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-primary mb-3">Update</button>
+                    </div>
+                  </form>
+        
             <div class="row">
                 <ul class="row">
                     <li class="row">
@@ -15,7 +29,7 @@
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>desktop_windows</mat-icon></div>
                                 <mat-card-title> Computers</mat-card-title>
-                                <mat-card-subtitle> {{classRoom.classComputer}} ThinClients </mat-card-subtitle>
+                                <mat-card-subtitle> {{classRoom.classComputer}} Student ThinClients </mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/thinClient.jpg">
@@ -29,7 +43,6 @@
                                   <div class="col-auto">
                                     <button mat-raised-button>Update</button>
                                   </div>
-                                  
                                 </form>
                               </mat-card-actions>
                         </mat-card>
@@ -37,31 +50,64 @@
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>tv</mat-icon></div>
                                 <mat-card-title> Screens</mat-card-title>
-                                <mat-card-subtitle>{{classRoom.classScreens}} Screens</mat-card-subtitle>
+                                <mat-card-subtitle>{{classRoom.classScreens}} Student Screens</mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/studentMonitor.jpg">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>mouse</mat-icon></div>
                                 <mat-card-title>Mouses</mat-card-title>
-                                <mat-card-subtitle>{{classRoom.classMouses}} Mouses</mat-card-subtitle>
+                                <mat-card-subtitle>{{classRoom.classMouses}} Student Mouses</mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/studentMouse.jpg">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>keyboard</mat-icon></div>
                                 <mat-card-title>Keyboards</mat-card-title>
-                                <mat-card-subtitle>{{classRoom.classKeyboards}} Keyboards</mat-card-subtitle>
+                                <mat-card-subtitle>{{classRoom.classKeyboards}} Student Keyboards</mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/studentKeyboard.png">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
@@ -72,6 +118,17 @@
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/lecturerPC.png">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
@@ -82,36 +139,80 @@
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/lecturerScreen.jpg">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>tv</mat-icon></div>
-                                <mat-card-title>TVs</mat-card-title>
-                                <mat-card-subtitle>{{classRoom.classTVs}} TVs</mat-card-subtitle>
+                                <mat-card-title>ClassRoom TVs</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classTVs}} ClassRoom TVs</mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/classRoomTV.png">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>settings_remote</mat-icon></div>
                                 <mat-card-title>TV Remote</mat-card-title>
-                                <mat-card-subtitle>{{classRoom.classTVRemotes}} TV Remotes</mat-card-subtitle>
+                                <mat-card-subtitle>{{classRoom.classTVRemotes}} ClassRoom TV Remotes</mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/classRoomTVRemote.png">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
                                 <div mat-card-avatar class="example-header-image"><mat-icon>scanner</mat-icon></div>
-                                <mat-card-title>Servers</mat-card-title>
-                                <mat-card-subtitle>{{classRoom.classServers}} Servers</mat-card-subtitle>
+                                <mat-card-title>Network Servers</mat-card-title>
+                                <mat-card-subtitle>{{classRoom.classServers}} Network Servers</mat-card-subtitle>
                               </mat-card-header>
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/classServer.jpg">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
@@ -122,6 +223,17 @@
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/classMicrophone.jpg">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                         <mat-card class="shadow col-xl-2 col-sm-6 col-sm-6" style="margin: 1%;">
                             <mat-card-header>
@@ -132,6 +244,17 @@
                               <mat-card-content>
                                 <img mat-card-image src="../../assets/Images/classProjector.jpg">
                               </mat-card-content>
+                              <mat-card-actions>
+                                <form class="row g-3">
+                                  <div class="col-auto">
+                                    <label for="inputPassword2" class="visually-hidden">Enter Value</label>
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="0">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button mat-raised-button>Update</button>
+                                  </div>
+                                </form>
+                              </mat-card-actions>
                         </mat-card>
                     </li>
                 </ul>

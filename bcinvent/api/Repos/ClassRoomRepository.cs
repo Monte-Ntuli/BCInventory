@@ -35,8 +35,8 @@ namespace api.Repos
       }
 
        
-      _dbContext.Update(entity);
-      _dbContext.Remove(classRoom);
+      _dbContext.Update(classRoom);
+      //_dbContext.Remove(classRoom);
       await _dbContext.SaveChangesAsync();
       return entity;
     }
