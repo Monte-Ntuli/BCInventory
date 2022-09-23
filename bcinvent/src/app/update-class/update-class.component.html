@@ -55,13 +55,13 @@
                                 <img mat-card-image src="../../assets/Images/studentMonitor.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="classScreens">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -76,13 +76,13 @@
                                 <img mat-card-image src="../../assets/Images/studentMouse.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="classMouses">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -97,13 +97,13 @@
                                 <img mat-card-image src="../../assets/Images/studentKeyboard.png">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="classKeyboards">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -118,13 +118,13 @@
                                 <img mat-card-image src="../../assets/Images/lecturerPC.png">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="lecturerPC">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -139,13 +139,13 @@
                                 <img mat-card-image src="../../assets/Images/lecturerScreen.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="lecturerScreens">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -160,13 +160,13 @@
                                 <img mat-card-image src="../../assets/Images/classRoomTV.png">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="classTVs">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -181,13 +181,13 @@
                                 <img mat-card-image src="../../assets/Images/classRoomTVRemote.png">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="classTVRemotes">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -202,13 +202,13 @@
                                 <img mat-card-image src="../../assets/Images/classServer.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="classServers">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -223,13 +223,13 @@
                                 <img mat-card-image src="../../assets/Images/classMicrophone.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="micrphones">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>
@@ -244,13 +244,13 @@
                                 <img mat-card-image src="../../assets/Images/classProjector.jpg">
                               </mat-card-content>
                               <mat-card-actions>
-                                <form class="row g-3">
+                                <form class="row g-3" [formGroup]="classRoomInfoForm">
                                   <div class="col-auto">
                                     <label for="inputPassword2" class="visually-hidden">Enter Value</label>
-                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0">
+                                    <input type="text" class="form-control" id="inputPassword2" placeholder="0" formControlName="projectors">
                                   </div>
                                   <div class="col-auto">
-                                    <button mat-raised-button>Update</button>
+                                    <button mat-raised-button (click)="UpdateClassRoom()">Update</button>
                                   </div>
                                 </form>
                               </mat-card-actions>

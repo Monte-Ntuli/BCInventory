@@ -18,6 +18,7 @@ export class UpdateClassComponent implements OnInit {
   classRoomInfo: any;
   item: any;
 
+  classIP = ' ';
   classComputer = ' ';
   classScreens = ' ';
   classMouses = ' ';
@@ -31,10 +32,21 @@ export class UpdateClassComponent implements OnInit {
   projectors = ' ';
 
   classRoomInfoForm : FormGroup = new FormGroup({
+
     'className': new FormControl('',[Validators.minLength(1)]),
     'classIP': new FormControl('',[Validators.maxLength(15)]),
     'classComputer': new FormControl(''),
     'classScreens': new FormControl(''),
+    'classMouses': new FormControl(''),
+    'classKeyboards': new FormControl(''),
+    'lecturerPC': new FormControl(''),
+    'lecturerScreens': new FormControl(''),
+    'classTVs': new FormControl(''),
+    'classTVRemotes': new FormControl(''),
+    'classServers': new FormControl(''),
+    'micrphones': new FormControl(''),
+    'projectors': new FormControl('')
+
   })
 
   constructor(private loginService : LoginService,
@@ -73,17 +85,30 @@ export class UpdateClassComponent implements OnInit {
      
     }, err =>{
       this._snackBar.open("server error");
+      console.log(err)
     })
   }
 
   GetSessionData(){
 
+    this.classIP = this.classRoomInfoForm.get('classIP')?.value;
     this.classComputer = this.classRoomInfoForm.get('classComputer')?.value;
     this.classScreens = this.classRoomInfoForm.get('classScreens')?.value;
+    this.classMouses = this.classRoomInfoForm.get('classMouses')?.value;
+    this.classKeyboards = this.classRoomInfoForm.get('classKeyboards')?.value;
+    this.lecturerPC = this.classRoomInfoForm.get('lecturerPC')?.value;
+    this.lecturerScreens = this.classRoomInfoForm.get('lecturerScreens')?.value;
+    this.classTVs = this.classRoomInfoForm.get('classTVs')?.value;
+    this.classTVRemotes = this.classRoomInfoForm.get('classTVRemotes')?.value;
+    this.classServers = this.classRoomInfoForm.get('classServers')?.value;
+    this.micrphones = this.classRoomInfoForm.get('micrphones')?.value;
+    this.projectors = this.classRoomInfoForm.get('projectors')?.value;
+
 
     this.classRoomInfo = {
       
       classId : this.classId,
+      classIP : this.classIP,
       className : this.className,
       classComputer : this.classComputer,
       classScreens : this.classScreens,
@@ -103,14 +128,50 @@ export class UpdateClassComponent implements OnInit {
       // 👇️ name Tom 0, country Chile 1
       console.log(key, value, index);
 
-      if (value == ' ') {
-        console.log("you did well man");
+      if (value == "") {
+        if (index == 1) {
+          this.classRoomInfo.classIP = this.classRoom.classIP;
+        }
+        if (index == 3) {
+          this.classRoomInfo.classComputer = this.classRoom.classComputer;
+        }
+        if (index == 4) {
+          this.classRoomInfo.classScreens = this.classRoom.classScreens;
+        }
+        if (index == 5) {
+          this.classRoomInfo.classMouses = this.classRoom.classMouses;
+        }
+        if (index == 6) {
+          this.classRoomInfo.classKeyboards = this.classRoom.classKeyboards;
+        }
+        if (index == 7) {
+          this.classRoomInfo.lecturerPC = this.classRoom.lecturerPC;
+        }
+        if (index == 8) {
+          this.classRoomInfo.lecturerScreens = this.classRoom.lecturerScreens;
+        }
+        if (index == 9) {
+          this.classRoomInfo.classTVs = this.classRoom.classTVs;
+        }
+        if (index == 10) {
+          this.classRoomInfo.classTVRemotes = this.classRoom.classTVRemotes;
+        }
+        if (index == 11) {
+          this.classRoomInfo.classServers = this.classRoom.classServers;
+        }
+        if (index == 12) {
+          this.classRoomInfo.micrphones = this.classRoom.micrphones;
+        }
+        if (index == 13) {
+          this.classRoomInfo.projectors = this.classRoom.projectors;
+        }
       }
-      else{
-        console.log("not empty");
-      }
+
+      
     });
 
+    //console.log(this.classRoomInfo);
+    
   }
 
   GetSessionDataName(){
