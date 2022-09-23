@@ -51,7 +51,19 @@ namespace api.Repos
       }
 
       classRoom.ClassName = entity.ClassName;
+      classRoom.ClassIP = entity.ClassIP;
       classRoom.ClassComputer = entity.ClassComputer;
+      classRoom.ClassScreens = entity.ClassScreens;
+      classRoom.ClassMouses = entity.ClassMouses;
+      classRoom.ClassKeyboards = entity.ClassKeyboards;
+      classRoom.LecturerPC = entity.LecturerPC;
+      classRoom.LecturerScreens = entity.LecturerScreens;
+      classRoom.ClassTVs = entity.ClassTVs;
+      classRoom.ClassTVRemotes = entity.ClassTVRemotes;
+      classRoom.ClassServers = entity.ClassServers;
+      classRoom.Micrphones = entity.Micrphones;
+      classRoom.Projectors = entity.Projectors;
+
       _dbContext.Update(classRoom);
       //_dbContext.Remove(classRoom);
       await _dbContext.SaveChangesAsync();

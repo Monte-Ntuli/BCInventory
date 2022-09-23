@@ -78,11 +78,15 @@ export class UpdateClassComponent implements OnInit {
       })
   }
 
+  UpdateClassIP(){
+
+  }
+
   UpdateClassRoom(){
     this.GetSessionData()
       this.loginService.UpdateClassRoom(this.classRoomInfo).subscribe(data => {
         this._snackBar.open("success");
-     
+        window.location.reload();
     }, err =>{
       this._snackBar.open("server error");
       console.log(err)
