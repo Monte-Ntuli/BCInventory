@@ -30,6 +30,7 @@ export class UpdateClassComponent implements OnInit {
   classServers = ' ';
   micrphones = ' ';
   projectors = ' ';
+  location = ' ';
 
   classRoomInfoForm : FormGroup = new FormGroup({
 
@@ -45,7 +46,9 @@ export class UpdateClassComponent implements OnInit {
     'classTVRemotes': new FormControl(''),
     'classServers': new FormControl(''),
     'micrphones': new FormControl(''),
-    'projectors': new FormControl('')
+    'projectors': new FormControl(''),
+    'location': new FormControl('')
+
 
   })
 
@@ -78,10 +81,6 @@ export class UpdateClassComponent implements OnInit {
       })
   }
 
-  UpdateClassIP(){
-
-  }
-
   UpdateClassRoom(){
     this.GetSessionData()
       this.loginService.UpdateClassRoom(this.classRoomInfo).subscribe(data => {
@@ -107,6 +106,7 @@ export class UpdateClassComponent implements OnInit {
     this.classServers = this.classRoomInfoForm.get('classServers')?.value;
     this.micrphones = this.classRoomInfoForm.get('micrphones')?.value;
     this.projectors = this.classRoomInfoForm.get('projectors')?.value;
+    this.location = this.classRoomInfoForm.get('location')?.value;
 
 
     this.classRoomInfo = {
@@ -124,7 +124,8 @@ export class UpdateClassComponent implements OnInit {
       classTVRemotes : this.classTVRemotes,
       classServers : this.classServers,
       micrphones : this.micrphones,
-      projectors : this.projectors
+      projectors : this.projectors,
+      location : this.location
 
     }
 
@@ -169,12 +170,15 @@ export class UpdateClassComponent implements OnInit {
         if (index == 13) {
           this.classRoomInfo.projectors = this.classRoom.projectors;
         }
+        if (index == 14) {
+          this.classRoomInfo.location = this.classRoom.location;
+        }
       }
 
       
     });
 
-    //console.log(this.classRoomInfo);
+    console.log(this.classRoomInfo);
     
   }
 

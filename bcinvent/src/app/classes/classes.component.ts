@@ -11,6 +11,8 @@ import { LoginService } from '../services/LoginService/login.service';
 export class ClassesComponent implements OnInit {
 
   classRooms : any;
+  serverLink : any;
+  classRoom : any;
 
   constructor(private loginService : LoginService,
     private _snackBar: MatSnackBar,
@@ -26,11 +28,36 @@ export class ClassesComponent implements OnInit {
     this.router.navigateByUrl('/addclass');
   }
 
+  findServerLink()
+  {
+    Object.entries(this.classRooms).forEach(([key, value], index) => {
+      // 👇️ name Tom 0, country Chile 1
+      console.log(key, value, index);
+
+      if (index == 0) {
+
+        this.serverLink = value;
+        console.log(this.serverLink.classIP);
+      }
+ 
+    });
+    //console.log("this is server link",this.serverLink.classIP);
+  }
+
+  goToServer()
+  {
+    this.classRooms.classIP = this.serverLink
+    //window.location.href='http://www.cnn.com/';
+    this.router.navigateByUrl(this.classRooms.classIP);
+    console.log(this.serverLink)
+  }
+
   displayAllClassRooms()
   {
     this.loginService.GetAllClassRoom().subscribe(data => {
       this.classRooms = data;
       console.log(data)
+      this.findServerLink();
     }, err => {
       this._snackBar.open("Can Not Display ClassRooms");
     })

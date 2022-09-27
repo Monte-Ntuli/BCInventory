@@ -3,8 +3,11 @@
     <section class="vh-100">
         <div class="container py-5 h-100">
           <div class="row d-flex align-items-center justify-content-center h-100">
+                <br>
+                <mat-progress-bar mode="indeterminate" value="white"></mat-progress-bar>
+                <br>
             <div class="col-md-8 col-lg-7 col-xl-6">
-              <img src="../../assets/draw2.svg"
+              <img src="../../assets/Untitled-1.png"
                 class="img-fluid" alt="Phone image">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
@@ -12,7 +15,7 @@
               <form [formGroup]="loginform" (submit)="login()" >
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control form-control-lg" formControlName="email" />
+                  <input type="email" id="email" class="form-control form-control-lg" formControlName="username" />
                   <label class="form-label" for="email">Email address</label>
                 </div>
       
@@ -32,6 +35,9 @@
       
               </form>
             </div>
+            <br>
+                <mat-progress-bar mode="indeterminate" value="white"></mat-progress-bar>
+                <br>
           </div>
         </div>
       </section>

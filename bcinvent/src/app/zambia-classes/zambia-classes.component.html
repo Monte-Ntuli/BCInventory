@@ -1,0 +1,53 @@
+<br>
+<br>
+<div class="shadow container-lg">
+    <mat-drawer-container class="example-container bg-white">
+        <br>
+        <mat-drawer  mode="side" opened>
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div class="container-fluid main-content bg-white">
+                <br>
+                <h1> <i class="material-icons "> location_city </i> {{classRooms.length}} Belgium Campus Pretoria classes</h1>
+
+                <div class="">
+
+                    <div>
+                        <button type="button" class="shadow btn btn-primary" (click)="addClass()">Add ClassRoom </button>
+                        &nbsp;
+                        &nbsp;
+                        <a href="classes" class="shadow btn btn-danger"> Exit </a>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <ul class="row">
+                            <li class="row" >
+                                <div class="col-xl-3 col-sm-6 col-sm-6" role="listitem" *ngFor="let class of classRooms" [ngSwitch]="class.location">
+                                    <ng-template ngSwitchCase="Zambia" >
+                                        <div  class="shadow card bg-body rounded mb-3">
+                                            <div class="card-header bg-white card-header-icon">
+                                                <div class="card-icon "><i class="material-icons ">school</i></div>
+
+                                                <h1 class="card-category">{{class.className}}</h1>
+                                                <a > <h2> <i class="material-icons "> exit_to_app </i>  Go to server </h2></a>
+                                            </div>
+                                            <div class="card-footer bg-white mb-3 text-black">
+                                                <div> 
+                                                    <a [routerLink]="['viewclass',class.classID]" > <i class="material-icons col-md-6">school</i><a type="button" class="btn btn-primary">View ClassRoom</a></a>
+                                                    <br>
+                                                    <br>
+                                                    <a [routerLink]="['updateclass', class.classID]" class="btn btn-warning">Update</a>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ng-template>
+                                </div>   
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

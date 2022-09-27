@@ -3,8 +3,8 @@
         <br>
         <mat-drawer-content class="container bg-white">
             <br>
-            <h1>Welcome To {{classRoom.className}}</h1>
-            <h2>IP address is {{classRoom.classIP}}</h2>
+            <h1>Welcome to {{classRoom.className}}</h1>
+            <h2> <mat-icon> place </mat-icon> &nbsp; Located in {{classRoom.location}}</h2>
             <br>
             <a href="classes" class="btn btn-warning">Exit</a>
             <br>
@@ -12,7 +12,7 @@
             
                 <form class="row g-3" [formGroup]="classRoomInfoForm">
                     <div class="col-auto">
-                      <h2>Update Class Name</h2>
+                      <h2>Class Name</h2>
                     </div>
                     <div class="col-auto">
                       <input type="text" class="form-control" id="inputclassName" placeholder="Hello World" formControlName="className">
@@ -22,10 +22,20 @@
                     </div>
                     <br>
                     <div class="col-auto">
-                      <h2>Update ip address</h2>
+                      <h2>ip address</h2>
                     </div>
                     <div class="col-auto">
                       <input type="text" class="form-control" id="inputclassName" placeholder="192.168.111.201" formControlName="classIP">
+                    </div>
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-primary mb-3" (click)="UpdateClassRoom()">Update</button>
+                    </div>
+                    <br>
+                    <div class="col-auto">
+                      <h2>location</h2>
+                    </div>
+                    <div class="col-auto">
+                      <input type="text" class="form-control" id="inputclassName" placeholder="Pretoria Campus" formControlName="location">
                     </div>
                     <div class="col-auto">
                       <button type="submit" class="btn btn-primary mb-3" (click)="UpdateClassRoom()">Update</button>

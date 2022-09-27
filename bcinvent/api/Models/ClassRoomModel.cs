@@ -1,8 +1,10 @@
-﻿namespace api.Models
+namespace api.Models
 {
     public class ClassRoomModel
     {
         public string ClassName { get; set; }
+        public string Location { get; set; }
+        public string Name { get; set; }
         public int ClassID { get; set; }
         public string ClassIP { get; set; }
         public int ClassComputer { get; set; }

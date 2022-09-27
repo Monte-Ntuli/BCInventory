@@ -3,6 +3,7 @@ namespace api.Models.DTO
   public class UpdateClassRoomDTO
   {
     public string ClassName { get; set; }
+    public string Location { get; set; }
     public int ClassID { get; set; }
     public string ClassIP { get; set; }
     public int ClassComputer { get; set; }

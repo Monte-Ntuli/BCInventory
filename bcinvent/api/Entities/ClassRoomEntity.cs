@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,6 +14,7 @@ namespace api.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string ClassName { get; set; }
+        public string Location { get; set; }
         public int ClassID { get; set; }
         public string ClassIP { get; set; }
         public int ClassComputer { get; set; }

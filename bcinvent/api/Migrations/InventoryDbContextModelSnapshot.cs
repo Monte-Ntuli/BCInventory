@@ -66,6 +66,10 @@ namespace api.Migrations
                     b.Property<int>("LecturerScreens")
                         .HasColumnType("int");
 
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Micrphones")
                         .HasColumnType("int");
 

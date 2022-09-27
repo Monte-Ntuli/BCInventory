@@ -63,6 +63,7 @@ namespace api.Repos
       classRoom.ClassServers = entity.ClassServers;
       classRoom.Micrphones = entity.Micrphones;
       classRoom.Projectors = entity.Projectors;
+      classRoom.Location = entity.Location;
 
       _dbContext.Update(classRoom);
       //_dbContext.Remove(classRoom);
