@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { __values } from 'tslib';
 import { LoginService } from '../services/LoginService/login.service';
+import {MatMenuModule} from '@angular/material/menu';
 
 @Component({
   selector: 'app-update-class',

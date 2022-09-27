@@ -28,6 +28,7 @@ import { PretoriaClassesComponent } from './pretoria-classes/pretoria-classes.co
 import { KemptonClassesComponent } from './kempton-classes/kempton-classes.component';
 import { StellenboschClassesComponent } from './stellenbosch-classes/stellenbosch-classes.component';
 import { ZambiaClassesComponent } from './zambia-classes/zambia-classes.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ZambiaClassesComponent } from './zambia-classes/zambia-classes.componen
     MatProgressBarModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatMenuModule
 
   ],
   providers: [
