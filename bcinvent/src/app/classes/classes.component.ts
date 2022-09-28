@@ -12,7 +12,7 @@ export class ClassesComponent implements OnInit {
 
   classRooms : any;
   serverLink : any;
-  classRoom : any;
+  specifiClassRoom : any;
 
   constructor(private loginService : LoginService,
     private _snackBar: MatSnackBar,
@@ -34,10 +34,12 @@ export class ClassesComponent implements OnInit {
       // 👇️ name Tom 0, country Chile 1
       console.log(key, value, index);
 
-      if (index == 0) {
+      if (index == 1) {
 
         this.serverLink = value;
-        console.log(this.serverLink.classIP);
+        this.specifiClassRoom = value;
+        this.serverLink = this.specifiClassRoom.classIP;
+        console.log(this.serverLink);
       }
  
     });
@@ -46,18 +48,19 @@ export class ClassesComponent implements OnInit {
 
   goToServer()
   {
-    this.classRooms.classIP = this.serverLink
-    //window.location.href='http://www.cnn.com/';
-    this.router.navigateByUrl(this.classRooms.classIP);
-    console.log(this.serverLink)
+    this.activatedRoute.params.subscribe(data => {
+      this.serverLink = data['classIP'];
+    })
+
+    window.location.href = this.serverLink;
   }
 
   displayAllClassRooms()
   {
     this.loginService.GetAllClassRoom().subscribe(data => {
       this.classRooms = data;
-      console.log(data)
-      this.findServerLink();
+      //console.log(data)
+      //this.findServerLink();
     }, err => {
       this._snackBar.open("Can Not Display ClassRooms");
     })

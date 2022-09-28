@@ -24,7 +24,7 @@ const routes: Routes = [
       { path: '', component: ClassesComponent},
       { path: 'viewclass/:id', component: ViewClassComponent},
       { path: 'updateclass/:id', component: UpdateClassComponent},
-      
+      { path: 'class/:classIP', component: ClassesComponent},
     ]},
   { path: 'addclass', component: AddClassComponent},
   { path: 'pretoria', component: PretoriaClassesComponent},

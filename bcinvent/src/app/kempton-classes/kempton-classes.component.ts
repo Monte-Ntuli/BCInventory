@@ -32,12 +32,12 @@ export class KemptonClassesComponent implements OnInit {
   {
     Object.entries(this.classRooms).forEach(([key, value], index) => {
       // 👇️ name Tom 0, country Chile 1
-      console.log(key, value, index);
+      //console.log(key, value, index);
 
       if (index == 0) {
 
         this.serverLink = value;
-        console.log(this.serverLink.classIP);
+        //console.log(this.serverLink.classIP);
       }
  
     });
@@ -56,7 +56,6 @@ export class KemptonClassesComponent implements OnInit {
   {
     this.loginService.GetAllClassRoom().subscribe(data => {
       this.classRooms = data;
-      console.log(data)
       this.findServerLink();
     }, err => {
       this._snackBar.open("Can Not Display ClassRooms");

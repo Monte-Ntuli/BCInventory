@@ -27,7 +27,7 @@
                                             <div class="shadow card bg-body rounded mb-3">
                                                 <div class="card-header bg-white card-header-icon">
                                                     <div class="card-icon "><h1 class="card-category"><mat-icon class="material-icons ">school</mat-icon> &nbsp; {{class.className}}</h1> </div>
-                                                    <a > <h2> <i class="material-icons "> exit_to_app </i>  Go to server </h2></a>
+                                                    <a [routerLink]="['class',class.classIP]" class="btn btn-light" > <mat-icon class="material-icons "> exit_to_app </mat-icon>  Go to server </a>
                                                 </div>
                                                 <div class="card-footer bg-white mb-3 text-black">
                                                     <div> 

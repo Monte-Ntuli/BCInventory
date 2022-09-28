@@ -56,7 +56,6 @@ export class ZambiaClassesComponent implements OnInit {
   {
     this.loginService.GetAllClassRoom().subscribe(data => {
       this.classRooms = data;
-      console.log(data)
       this.findServerLink();
     }, err => {
       this._snackBar.open("Can Not Display ClassRooms");
