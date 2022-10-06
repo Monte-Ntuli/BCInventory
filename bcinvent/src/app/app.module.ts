@@ -22,7 +22,6 @@ import { ViewClassComponent } from './view-class/view-class.component';
 import { UpdateClassComponent } from './update-class/update-class.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ClassLocationComponent } from './class-location/class-location.component';
 import { PretoriaClassesComponent } from './pretoria-classes/pretoria-classes.component';
 import { KemptonClassesComponent } from './kempton-classes/kempton-classes.component';
 import { StellenboschClassesComponent } from './stellenbosch-classes/stellenbosch-classes.component';
@@ -39,7 +38,6 @@ import { MatMenuModule } from '@angular/material/menu';
     AddClassComponent,
     ViewClassComponent,
     UpdateClassComponent,
-    ClassLocationComponent,
     PretoriaClassesComponent,
     KemptonClassesComponent,
     StellenboschClassesComponent,
