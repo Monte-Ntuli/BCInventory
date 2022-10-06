@@ -1,0 +1,1 @@
+C:\Users\E7240\Documents\GitHub\BCInventory\bcinvent\Mobile App\BCInvent.csproj;x64
