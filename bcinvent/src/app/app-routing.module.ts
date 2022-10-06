@@ -14,7 +14,7 @@ import { ZambiaClassesComponent } from './zambia-classes/zambia-classes.componen
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'home',pathMatch: 'full' },
+  { path: '', redirectTo: 'login',pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent},
   { path: 'home', component: HomeComponent},
