@@ -13,6 +13,24 @@ import {MatMenuModule} from '@angular/material/menu';
 })
 export class UpdateClassComponent implements OnInit {
 
+  name:string = "";
+  file:any;
+
+  getName(name: string) {
+    this.name = name;
+  }
+
+  getFile(event: any){
+    this.file = event.target.files[0];
+    console.log('file', this.file);
+  }
+
+  uploadClassLayout(){
+    
+    //create service to upload images
+    
+  }
+
   classId: number = 0;
   classRoom: any;
   className: any;
@@ -108,7 +126,6 @@ export class UpdateClassComponent implements OnInit {
     this.micrphones = this.classRoomInfoForm.get('micrphones')?.value;
     this.projectors = this.classRoomInfoForm.get('projectors')?.value;
     this.location = this.classRoomInfoForm.get('location')?.value;
-
 
     this.classRoomInfo = {
       

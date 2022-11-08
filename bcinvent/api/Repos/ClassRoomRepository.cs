@@ -41,6 +41,19 @@ namespace api.Repos
       return entity;
     }
 
+    public async Task<ClassRoomEntity> UploadClassRoomLayoutAsync(ClassRoomEntity entity)
+    {
+      var classRoom = await _dbContext.ClassRoom.FirstOrDefaultAsync(x => x.ClassID == entity.ClassID);
+      if (classRoom == null)
+      {
+        return null;
+      }
+
+      classRoom.classLayoutImage = entity.classLayoutImage;
+      _dbContext.Update(classRoom);
+      await _dbContext.SaveChangesAsync();
+      return entity;
+    }
     public async Task<ClassRoomEntity> UpdateClassRoomAsync(ClassRoomEntity entity)
     {
       var classRoom = await _dbContext.ClassRoom.FirstOrDefaultAsync(x => x.ClassID == entity.ClassID);
@@ -63,7 +76,7 @@ namespace api.Repos
       classRoom.ClassServers = entity.ClassServers;
       classRoom.Micrphones = entity.Micrphones;
       classRoom.Projectors = entity.Projectors;
-      classRoom.Location = entity.Location;
+      classRoom.LocationName = entity.LocationName;
 
       _dbContext.Update(classRoom);
       //_dbContext.Remove(classRoom);

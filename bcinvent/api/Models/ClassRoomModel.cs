@@ -3,7 +3,7 @@ namespace api.Models
     public class ClassRoomModel
     {
         public string ClassName { get; set; }
-        public string Location { get; set; }
+        public string LocationName { get; set; }
         public string Name { get; set; }
         public int ClassID { get; set; }
         public string ClassIP { get; set; }
@@ -18,6 +18,7 @@ namespace api.Models
         public int ClassServers { get; set; }
         public int Micrphones { get; set; }
         public int Projectors { get; set; }
-    }
+        public IFormFile classLayoutImage { get; set; }
+  }
 }
 

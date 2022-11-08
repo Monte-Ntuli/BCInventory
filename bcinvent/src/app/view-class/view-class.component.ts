@@ -25,7 +25,7 @@ export class ViewClassComponent implements OnInit {
 
     this.loginService.GetSpecificClassRoom(this.classId).subscribe(data => {
       this.classRoom = data;
-      console.log(data)
+      //console.log(data)
     }, err =>{
       this._snackBar.open("Unable to displayClass Room");
     })

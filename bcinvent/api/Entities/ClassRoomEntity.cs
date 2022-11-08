@@ -14,7 +14,7 @@ namespace api.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string ClassName { get; set; }
-        public string Location { get; set; }
+        public string LocationName { get; set; }
         public int ClassID { get; set; }
         public string ClassIP { get; set; }
         public int ClassComputer { get; set; }
@@ -28,6 +28,7 @@ namespace api.Entities
         public int ClassServers { get; set; }
         public int Micrphones { get; set; }
         public int Projectors { get; set; }
+        public IFormFile classLayoutImage { get; set; }
     }
 }
 

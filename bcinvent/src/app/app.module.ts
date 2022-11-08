@@ -27,6 +27,8 @@ import { KemptonClassesComponent } from './kempton-classes/kempton-classes.compo
 import { StellenboschClassesComponent } from './stellenbosch-classes/stellenbosch-classes.component';
 import { ZambiaClassesComponent } from './zambia-classes/zambia-classes.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { ReportProblemComponent } from './report-problem/report-problem.component';
+import { ClassLayoutComponent } from './class-layout/class-layout.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { MatMenuModule } from '@angular/material/menu';
     PretoriaClassesComponent,
     KemptonClassesComponent,
     StellenboschClassesComponent,
-    ZambiaClassesComponent
+    ZambiaClassesComponent,
+    ReportProblemComponent,
+    ClassLayoutComponent
   ],
   imports: [
     BrowserModule,

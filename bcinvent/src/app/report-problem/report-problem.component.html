@@ -1,0 +1,43 @@
+<br>
+<div class="shadow container-lg">
+    <mat-drawer-container class="example-container bg-white">
+        <br>
+        <mat-drawer mode="side" closed>
+            <app-sidenav></app-sidenav>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div class="container-fluid main-content bg-white">
+                <br>
+                <h1> <i class="material-icons "> school </i> {{classRooms.length}} Belgium Campus Classrooms </h1>
+
+                <div class="">
+
+                    <div>
+                        <a href="home" class="shadow btn btn-danger"> Exit </a>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <ul class="row">
+                            <li class="row">
+                                        <div class="col-xl-3 col-sm-6 col-sm-6" role="listitem" *ngFor="let class of classRooms">
+                                            <div class="shadow card bg-body rounded mb-3">
+                                                <div class="card-header bg-white card-header-icon">
+                                                    <div class="card-icon "><h1 class="card-category"><mat-icon class="material-icons ">school</mat-icon> &nbsp; {{class.className}}</h1> </div>
+                                                    <a [routerLink]="['layout',class.classID]" class="btn btn-light" > <mat-icon class="material-icons "> exit_to_app </mat-icon>  Go to ClassRoom </a>
+                                                </div>
+                                                <div class="card-footer bg-white mb-3 text-black">
+                                                    <div> 
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+
+            </div>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>

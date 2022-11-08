@@ -1,4 +1,4 @@
-﻿using api.Entities;
+using api.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,8 +11,9 @@ namespace api
     public class InventoryDbContext :IdentityDbContext
     {
         public virtual DbSet<ClassRoomEntity> ClassRoom { get; set; }
+    public virtual DbSet<LocationsEntity> Locations { get; set; }
 
-        public InventoryDbContext(DbContextOptions options) : base(options)
+    public InventoryDbContext(DbContextOptions options) : base(options)
         {
 
         }

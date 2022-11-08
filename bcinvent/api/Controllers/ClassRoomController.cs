@@ -43,11 +43,28 @@ namespace api.Controllers
             }
             catch (Exception ex)
             {
-                var error = new ErrorModel { title = ex.Message };
+                var error = new ErrorModel { StatusCode = ex.HResult, title = ex.Message };
 
                 return BadRequest(error);
             }
         }
+    #endregion
+    #region Upload layout
+    [HttpPost("UploadClassRoomLayout")]
+    public async Task<IActionResult> UploadClassRoomLayoutAsync([FromForm] classLayoutDTO classLayout)
+    {
+      try
+      {
+        await _unitOfWork.ClassRoom.UploadClassRoomLayoutAsync(_mapper.Map<ClassRoomEntity>(classLayout));
+        return Accepted("success");
+      }
+      catch (Exception ex)
+      {
+        var error = new ErrorModel { StatusCode = ex.HResult, title = ex.Message };
+
+        return BadRequest(error);
+      }
+    }
     #endregion
 
     #region Update Class Name
@@ -61,25 +78,7 @@ namespace api.Controllers
       }
       catch (Exception ex)
       {
-        var error = new ErrorModel { title = ex.Message };
-
-        return BadRequest(error);
-      }
-    }
-    #endregion
-
-    #region Update Class Name
-    [HttpPost("UpdateClassRoom")]
-    public async Task<IActionResult> UpdateClassRoomAsync([FromBody] UpdateClassRoomDTO updateClassRoom)
-    {
-      try
-      {
-        await _unitOfWork.ClassRoom.UpdateClassRoomAsync(_mapper.Map<ClassRoomEntity>(updateClassRoom));
-        return Accepted("success");
-      }
-      catch (Exception ex)
-      {
-        var error = new ErrorModel { title = ex.Message };
+        var error = new ErrorModel { StatusCode = ex.HResult ,title = ex.Message };
 
         return BadRequest(error);
       }

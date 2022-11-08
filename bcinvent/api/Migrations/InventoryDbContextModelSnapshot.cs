@@ -66,7 +66,7 @@ namespace api.Migrations
                     b.Property<int>("LecturerScreens")
                         .HasColumnType("int");
 
-                    b.Property<string>("Location")
+                    b.Property<string>("LocationName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -79,6 +79,24 @@ namespace api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ClassRoom");
+                });
+
+            modelBuilder.Entity("api.Entities.LocationsEntity", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("LocationID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LocationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Locations");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
